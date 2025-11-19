@@ -7,9 +7,13 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private PlayerMovement pm;
-    [SerializeField] private GameObject tutorialTextCont;
+    [SerializeField] private Speedrun speedrun;
+
     [SerializeField] private TextMeshProUGUI xSpeedText;
     [SerializeField] private TextMeshProUGUI propAmmoText;
+    [SerializeField] private TextMeshProUGUI speedrunText;
+
+    [SerializeField] private GameObject tutorialTextCont;
 
     private void Update()
     {
@@ -39,6 +43,14 @@ public class UIManager : MonoBehaviour
         } else
         {
             propAmmoText.text = "";
+        }
+
+        if (speedrun != null)
+        {
+            if (speedrun.GetActive())
+            {
+                speedrunText.text = speedrun.GetSpeedrunTime();
+            }
         }
 
         if (pm.transform.position.y >= 30.0f)

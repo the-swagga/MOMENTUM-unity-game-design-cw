@@ -7,7 +7,7 @@ public class LaunchPad : MonoBehaviour
     [SerializeField] private GameObject player;
     private PlayerMovement pm;
 
-    void Start()
+    private void Start()
     {
         pm = player.GetComponent<PlayerMovement>();
     }

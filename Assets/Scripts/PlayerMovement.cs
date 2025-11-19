@@ -4,6 +4,7 @@ using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
@@ -62,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, groundLayer);
         if (isGrounded)
             rb.drag = groundDrag;
