@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
 
         if (pm.transform.position.y >= 30.0f)
         {
+            Debug.Log("arnav");
             tutorialTextCont.SetActive(false);
         }
     }
