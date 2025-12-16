@@ -5910,8 +5910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b8b50f53a056c43802a0d8b381ac58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 1000
-  sensY: 1000
+  sensX: 500
+  sensY: 500
   look: {fileID: 787160203}
   weapon: {fileID: 820470313}
 --- !u!1 &965578850
@@ -5956,7 +5956,7 @@ MonoBehaviour:
   airDrag: 25
   jumpStrength: 7.5
   jumpCooldown: 0.5
-  airControl: 100
+  airControl: 75
   launchPadStrength: 25
   playerHeight: 2
   groundLayer:
